@@ -4,7 +4,7 @@
 #------------------------------------------------------------------------------
 #Importing Data
 
-#Locate the directory to which you saved FinalData.csv
+#Locate the directory to which you saved FinalData1.csv and FinalData2.csv
 #Be sure to seperate subdirectory names with \\
 data=read.csv("INSERT\\FILE\\DIRECTORY\\HERE\\FinalData1.csv")
 data2=read.csv("INSERT\\FILE\\DIRECTORY\\HERE\\FinalData2.csv")

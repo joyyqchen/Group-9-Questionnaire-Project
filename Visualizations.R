@@ -1,20 +1,13 @@
 #Creating Visualizations for Questionnaire Data
-#------------------------------------------------------------------------------
-#------------------------------------------------------------------------------
-#Downloading Packages
 
-#Download WORDCLOUD here: http://cran.cnr.berkeley.edu/web/packages/index.html
-
-#Load packages in the 'Packages' Tab of the bottom-right console by selecting
-#'Install Packages' and locating the downloaded files in your Downloads directory
 #------------------------------------------------------------------------------
 #------------------------------------------------------------------------------
 #Importing Data
 
 #Locate the directory to which you saved FinalData.csv
 #Be sure to seperate subdirectory names with \\
-
-data=read.csv("INSERT\\FILE\\DIRECTORY\\HERE\\FinalData.csv")
+data=read.csv("INSERT\\FILE\\DIRECTORY\\HERE\\FinalData1.csv")
+data2=read.csv("INSERT\\FILE\\DIRECTORY\\HERE\\FinalData2.csv")
 #------------------------------------------------------------------------------
 #------------------------------------------------------------------------------
 #Summary Statistics (for data-knowledge purposes)
@@ -65,20 +58,29 @@ text(mean(data$Visual)-1.5,9.3,paste("Average Score",
 #------------------------------------------------------------------------------
 #------------------------------------------------------------------------------
 #Pie Charts
-#Perecentage of class that has taken Stat 133
-r.percentage <- sum(data$STAT133)/nrow(data)*100
-
-#Percentage of class that has taken a CS course
-percentage <- sum(data$CS)/nrow(data)*100
+XML=data2$XML
+C=data2$C
+PHP=data2$PHP
+Java=data2$Java
+Scala=data2$Scala
+Python=data2$Python
+Pascal=data2$Pascal
+Pig=data2$Pig
+Unix=data2$Unix
+HTML=data2$HTML
+Matlab=data2$Matlab
+SQL=data2$SQL
+R=data2$R
+Scheme=data2$Scheme
+ruby=data2$ruby
+CSS=data2$cSS
+list=c(XML,PHP,C,Scala,Java,Pascal,HTML,Pig,Python,Unix,Matlab,SQL,
+       R,Scheme,CSS)
 
 par(mfrow=c(1,1))
-pie.data <- c(100,percentage)
-pie(pie.data, 
-    labels = c("No Computer Science Experience","Computer Science Experience"), 
-    main="% of class with Computer Science Experience")
-pie.data.two <- c(r.percentage,100)
-pie(pie.data.two, labels= c("No R Expierence", "R Experience"), 
-    main = "% of class with R Experience")
+pie(list,labels = 
+          c("XML","PHP","C","Scala","Java","Pascal","HTML","Pig","Python","Unix",
+            "Matlab","SQL","R","Scheme","CSS"), main="Program Proficiencies")
 #------------------------------------------------------------------------------
 #------------------------------------------------------------------------------
-#Wordle
+

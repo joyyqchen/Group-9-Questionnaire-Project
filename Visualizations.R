@@ -3,7 +3,6 @@
 #------------------------------------------------------------------------------
 #Downloading Packages
 
-#Download GGPLOT2 here: http://cran.cnr.berkeley.edu/web/packages/index.html
 #Download WORDCLOUD here: http://cran.cnr.berkeley.edu/web/packages/index.html
 
 #Load packages in the 'Packages' Tab of the bottom-right console by selecting
@@ -66,7 +65,6 @@ text(mean(data$Visual)-1.5,9.3,paste("Average Score",
 #------------------------------------------------------------------------------
 #------------------------------------------------------------------------------
 #Pie Charts
-library(ggplot2)
 #Perecentage of class that has taken Stat 133
 r.percentage <- sum(data$STAT133)/nrow(data)*100
 
@@ -74,16 +72,13 @@ r.percentage <- sum(data$STAT133)/nrow(data)*100
 percentage <- sum(data$CS)/nrow(data)*100
 
 par(mfrow=c(1,1))
-pie.data <- c(percentage,100)
+pie.data <- c(100,percentage)
 pie(pie.data, 
-    labels = c("Computer Science Experience","No Computer Science Experience"), 
-    main="% of class with CS Experience")
+    labels = c("No Computer Science Experience","Computer Science Experience"), 
+    main="% of class with Computer Science Experience")
 pie.data.two <- c(r.percentage,100)
 pie(pie.data.two, labels= c("No R Expierence", "R Experience"), 
     main = "% of class with R Experience")
-
-# These two pie charts show that we have a large percentage of the class that can do basic
-# data cleaning and visualizations via R. However we have a large deficit of programming
-# experience in terms of writing algorithms.
 #------------------------------------------------------------------------------
 #------------------------------------------------------------------------------
+#Wordle

@@ -1,4 +1,0 @@
-Notes & Instructions on Reproducibility
-=============================
-
-

@@ -37,28 +37,28 @@ par(mfrow=c(1,2))
 #Aural
 hist(data$Aural, xlim = c(0,15), ylim = c(0,10), 
      xlab = "Scores", main ="Aural Scores Distribution", 
-     density=75, col = "blue")
+     density=70, col = "blue")
 segments(mean(data$Aural),0,mean(data$Aural),9,lwd=4)
 text(mean(data$Aural),9.3,paste("Average Score",
      format(round(mean(data$Aural), 2), nsmall = 2)))
 #Kinesthetic
 hist(data$Kinesthetic, xlim = c(0,15), ylim = c(0,10), 
      xlab= "Scores", main = "Kinesthetic Scores Distribution",
-     density=75, col = "red")
+     density=70, col = "red")
 segments(mean(data$Kinesthetic),0,mean(data$Kinesthetic),9,lwd=4)
 text(mean(data$Kinesthetic)+1,9.3,paste("Average Score",
      format(round(mean(data$Kinesthetic), 2), nsmall = 2)))
 #Read & Write
 hist(data$Read_Write, xlim = c(0,15), ylim = c(0,10), 
      xlab= "Scores", main = "Read & Write Scores Distribution",
-     density=75, col = "dark green")
+     density=70, col = "dark green")
 segments(mean(data$Read_Write),0,mean(data$Read_Write),9,lwd=4)
 text(mean(data$Read_Write),9.3,paste("Average Score",
      format(round(mean(data$Read_Write), 2), nsmall = 2)))
 #Visual
 hist(data$Visual, xlim = c(0,15), ylim = c(0,10), 
      xlab= "Scores", main = "Visual Scores Distribution",
-     density=75, col = "orange")
+     density=70, col = "orange")
 segments(mean(data$Visual),0,mean(data$Visual),9,lwd=4)
 text(mean(data$Visual)-1.5,9.3,paste("Average Score",
      format(round(mean(data$Visual), 2), nsmall = 2)))
